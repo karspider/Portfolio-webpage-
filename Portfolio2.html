@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Karthik N - Portfolio</title>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		
+			$(document).ready(function(){
+				$('body').scrollspy({target:'.navbar', offset:50});
+				$('#navs a, #mainbutton').on('click', function(event){
+					if(this.hash !== ""){
+						event.preventDefault();
+						var hash = this.hash;
+						$('body').animate({scrollTop: $(hash).offset().top}, 800, "swing", function(){
+							window.location.hash = hash;
+						})
+					}
+				})
+			})
+		</script>
+		<style>
+			li{
+				display:inline;
+			}
+			.navbar {
+				box-shadow:0 0 2rem 1rem rgba(0, 0, 0,0.7);
+				margin: 0px;
+				z-index:4;
+			}
+			.section{
+				padding: 50px 50px 50px 50px;
+				color:white;
+				margin: -10px;
+				position:relative;
+				box-shadow:0 0 5rem 0rem rgba(0, 0, 0,0.7);
+			}
+			
+			.section h1{
+				font-size:5rem;
+				text-align:center;
+				word-wrap: break-word;
+			}
+			.section p{
+				font-size:2rem;
+			}
+			#Home {
+				padding: 100px 50px 50px 50px;
+				background-image: url("http://marymkelly.github.io/mood-mixer/img/skyline.jpg");
+				background-size:cover;
+				box-shadow:0 0 5rem 1rem rgba(0, 0, 0,0.7);
+				color:white;
+				height:60rem;
+				text-align:center;
+				margin: -10px;
+				z-index:3;position:relative;
+			}
+			#Home h1{
+				font-size:10rem;
+			}
+			#About {
+				background-color:#1E88E5;
+				z-index:2;
+			}
+			#Portfolio {
+				background-color:#673ab7;
+				z-index:1;
+			}
+			#Portfolio img {
+				width:100%;
+				padding: 10px 10px 10px 10px;
+			}
+			#Contact {
+				background-color:#ff9800;
+				z-index:0;
+			}
+			#prefooter{
+				background-color:#a6a6a6;
+				z-index:3;
+				text-align:center;
+			}
+		
+			
+			footer{
+				padding: 50px 50px 50px 50px;
+				position:relative;
+				background-color:black;
+				color:white;
+				z-index:4;
+			}
+			#pp {
+				width:20rem;
+				height:20rem;
+				border-radius:100%;
+			}
+			.social{
+				width:4rem; 
+				height:4rem; 
+				border-radius:50%; 
+				border:1px solid white;
+				color:white;
+				font-size:2rem;
+				padding:0.5rem 0px 0px 0px;
+			}
+			.social:hover{
+				background-color:white;
+			}
+			#githubBtn{
+				color:black;
+			}
+			#fbBtn{
+				color:#3b5998;
+			}
+			#redditBtn{
+				color:#cee3f8;
+			}
+			#instaBtn{
+				color:#125688;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#navs">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a id="mainbutton" class="navbar-brand" href="#Home"><strong>KPort</strong></a>
+				</div>
+				<div class="navbar-collapse" id="navs">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#Home">Home</a></li>
+						<li><a href="#About">About</a></li>
+						<li><a href="#Portfolio">Portfolio</a></li>
+						<li><a href="#Contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div id="Home" class="container-fluid">
+			<h1>Karthik's Portfolio</h1>
+			<h3>Karthik's many projects</h3>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div id="About" class="section col-md-8">
+					<h1>About</h1>
+					<hr>
+					<div class="row">
+						<div class="col-md-8">
+							<p>The name is Karthik and I'm an UX/UI designeveloper, with extensive practical experience in brand strategy, creative direction and project management; devoted to Functional Programming and Information Architecture. Also a huge fan of semantics and futuristic interfaces.
+							</p>
+							<hr>
+							<p>Web Developer - Graphic Artist - User Experience Designer</h3>
+						</div>
+						<div class="col-md-4">
+							<p style="text-align: center;">
+								<img id="pp" src="https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/14222295_1382855238408725_4266163544999501904_n.jpg?oh=48aa8ce58b5b6dfbe71174e9a589c6c7&oe=5886734B"/>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div id="Portfolio" class="section col-md-8">
+					<h1>Portfolio</h1>
+					<hr>
+					<div class="row">
+						<div class="col-md-4">
+							<img src="http://qlip.in/sites/default/files/YMCA-Realtor-Donation-3.jpg"/>
+						</div>
+						<div class="col-md-4">
+							<img src="http://qlip.in/sites/default/files/webcaballero.jpg"/>
+						</div>
+						<div class="col-md-4">
+							<img src="http://qlip.in/sites/default/files/webmarqas.jpg"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<img src="http://qlip.in/sites/default/files/webbrandaxis.jpg"/>
+						</div>
+						<div class="col-md-4">
+							<img src="http://qlip.in/sites/default/files/panacea1.jpg"/>
+						</div>
+						<div class="col-md-4">
+							<img src="http://qlip.in/sites/default/files/webgatomalo.jpg"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<img src="http://qlip.in/sites/default/files/YMCA-Realtor-Donation-3.jpg"/>
+						</div>
+						<div class="col-md-4">
+							<img src="http://qlip.in/sites/default/files/webcaballero.jpg"/>
+						</div>
+						<div class="col-md-4">
+							<img src="http://qlip.in/sites/default/files/webmarqas.jpg"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div id="Contact" class="section col-md-8">
+					<h1>Contact Me</h1>
+					<hr>
+					<div class="row">
+						<div class="col-md-6">
+							<form>
+								<input type="text" class="form-control" placeholder="Name"><br>
+								<input type="text" class="form-control" placeholder="Email Address"><br>
+								<input type="text" class="form-control" placeholder="Phone Number"><br>
+								<input style="height:200px;" type="text" class="form-control" placeholder="Message"><br>
+								<button class="btn btn-primary" type="submit">Send</button>
+							</form>
+						</div>
+						<div class="col-md-6">
+						<p>
+							Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life, or even if only for some nice Fika here in stunning Toronto... just feel free to drop me a line anytime.
+							<br></br>
+							I promise to reply A.S.A.P.
+						</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+		<div id="prefooter" class="section container-fluid">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-3">
+					<h2>About this page</h2>
+					<p>
+						Made with
+							<i class="fa fa-fw fa-coffee"></i>
+						and
+							<i class="fa fa-fw fa-music"></i>
+						by
+							<a href="https://github.com/karspider">Karthikeyan Neelamegam</a>
+					</p>
+				</div>
+				<div class="col-md-2"></div>
+				<div class="col-md-3">
+					<h2>Around the web</h2>
+					<ul>
+						<li>
+							<a class="btn social" id="githubBtn" href="https://github.com/karspider">
+								<i class="fa fa-fw fa-github"></i>
+							</a> 
+						</li>
+						<li>
+							<a class="btn social" id="redditBtn" href="https://www.reddit.com/user/karspider">
+								<i class="fa fa-fw fa-reddit"></i>
+							</a> 
+						</li>
+						<li>
+							<a class="btn social" id="fbBtn" href="https://www.facebook.com/karspider">
+								<i class="fa fa-fw fa-facebook"></i>
+							</a> 
+						</li>
+						<li>
+							<a class="btn social" id="instaBtn" href="https://instagram.com/karthik.n">
+								<i class="fa fa-fw fa-instagram"></i>
+							</a> 
+						</li>
+					</ul>
+					
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+		<footer class="section">
+			<p class="text-center">Written and coded by <a href="https://github.com/karspider">Karthikeyan Neelamegam</a>.</p>
+		</footer>
+	</body>
+</html>
